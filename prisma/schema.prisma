@@ -19,12 +19,20 @@ model Producto {
   precio Float
   imagen String
   categoriaId Int
-  categoria Catagoria @relation(fields: [categoriaId], references: [id])
+  categoria Categoria @relation(fields: [categoriaId], references: [id])
 }
 
-model Catagoria {
+model Categoria {
   id Int @id @default(autoincrement())
   nombre String
   icono String
   productos Producto[]
+}
+
+model Orden {
+  id Int @id @default(autoincrement())
+  nombre String
+  fecha String
+  total Float
+  pedido Json
 }
