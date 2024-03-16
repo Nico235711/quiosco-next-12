@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Sidebar from "../components/Sidebar"
 
 
 export default function Home({ children, pagina }) {
@@ -11,7 +12,7 @@ export default function Home({ children, pagina }) {
 
       <div className="md:flex">
         <aside className="md:w-4/12 xl:w-1/4 2xl:w-1/5">
-          Sidebar aqui
+          <Sidebar />
         </aside>
 
         <main
